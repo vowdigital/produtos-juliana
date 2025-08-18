@@ -3,11 +3,47 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Star, Users, Award, ArrowRight, Play, Download } from "lucide-react";
 
+const Header = () => (
+  <header className="fixed top-0 left-0 w-full z-30 bg-white/80 backdrop-blur-md shadow-brand transition-smooth">
+    <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="flex items-center gap-3">
+        <img src="/lovable-uploads/e94de634-6660-4b77-86cb-27d94fec7252.png" alt="Juliana Furquim" className="h-10 w-10 rounded-full shadow-card" />
+        <span className="font-heading text-xl text-brand-blue font-bold tracking-tight">Juliana Furquim</span>
+      </div>
+      <nav className="hidden md:flex gap-8 text-brand-blue font-body font-medium">
+        <a href="#hero" className="hover:text-brand-orange transition-smooth">Início</a>
+        <a href="#problema" className="hover:text-brand-orange transition-smooth">Problema</a>
+        <a href="#solucao" className="hover:text-brand-orange transition-smooth">Solução</a>
+        <a href="#receber" className="hover:text-brand-orange transition-smooth">O que recebe</a>
+        <a href="#sobre" className="hover:text-brand-orange transition-smooth">Sobre</a>
+      </nav>
+      <a href="#cta" className="hidden md:inline-block bg-brand-orange text-white px-6 py-2 rounded-lg font-body font-semibold shadow-float hover:scale-105 transition-smooth">Quero o Script</a>
+    </div>
+  </header>
+);
+
+const Footer = () => (
+  <footer className="bg-gradient-hero text-white py-10 mt-20">
+    <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="flex items-center gap-3">
+        <img src="/lovable-uploads/e94de634-6660-4b77-86cb-27d94fec7252.png" alt="Juliana Furquim" className="h-8 w-8 rounded-full" />
+        <span className="font-heading text-lg font-bold">Juliana Furquim</span>
+      </div>
+      <div className="text-sm font-body text-white/80">© {new Date().getFullYear()} Todos os direitos reservados.</div>
+      <div className="flex gap-4">
+        <a href="https://instagram.com/julianafurquimadv" target="_blank" rel="noopener" className="hover:text-brand-orange transition-smooth">Instagram</a>
+        <a href="mailto:contato@julianafurquim.com.br" className="hover:text-brand-orange transition-smooth">Contato</a>
+      </div>
+    </div>
+  </footer>
+);
+
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-white overflow-hidden">
+    <div className="min-h-screen bg-background pt-20">
+      <Header />
+  {/* Hero Section */}
+  <section id="hero" className="relative bg-gradient-hero text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative container mx-auto px-4 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -64,8 +100,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problema Section */}
-      <section className="py-20 bg-gradient-section">
+  {/* Problema Section */}
+  <section id="problema" className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-6">
@@ -110,8 +146,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Solução Section */}
-      <section className="py-20 bg-background">
+  {/* Solução Section */}
+  <section id="solucao" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -171,8 +207,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* O que vai receber */}
-      <section className="py-20 bg-gradient-section">
+  {/* O que vai receber */}
+  <section id="receber" className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -237,8 +273,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Principal */}
-      <section className="py-20 bg-brand-blue text-white">
+  {/* CTA Principal */}
+  <section id="cta" className="py-20 bg-brand-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl lg:text-5xl font-heading font-bold">
@@ -277,8 +313,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Sobre Juliana */}
-      <section className="py-20 bg-background">
+  {/* Sobre Juliana */}
+  <section id="sobre" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -361,6 +397,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
