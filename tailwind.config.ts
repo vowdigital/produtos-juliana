@@ -61,7 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Juliana Furquim Brand Colors
+				brand: {
+					orange: 'hsl(var(--brand-orange))',
+					blue: 'hsl(var(--brand-blue))',
+					gray: 'hsl(var(--brand-light-gray))',
+					white: 'hsl(var(--brand-white))'
 				}
+			},
+			fontFamily: {
+				'heading': ['Bethany Elingston', 'Instrument Sans', 'serif'],
+				'body': ['Instrument Sans', 'system-ui', 'sans-serif'],
+				'sans': ['Instrument Sans', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

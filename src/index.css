@@ -2,41 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Juliana Furquim Design System 
+Cores: #FF6941, #384652, #EBEBEB, #FFFFFF
+Tipografias: Bethany Elingston (principal), Instrument Sans (apoio)
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Paleta Juliana Furquim */
+    --brand-orange: 14 100% 63%; /* #FF6941 */
+    --brand-blue: 209 17% 31%; /* #384652 */
+    --brand-light-gray: 0 0% 92%; /* #EBEBEB */
+    --brand-white: 0 0% 100%; /* #FFFFFF */
+    
+    /* Gradientes Estratégicos */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(14 100% 55%));
+    --gradient-section: linear-gradient(180deg, hsl(var(--brand-white)), hsl(var(--brand-light-gray)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(14 85% 58%));
+    
+    /* Sombras com Brand Colors */
+    --shadow-brand: 0 10px 30px -10px hsl(var(--brand-orange) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--brand-blue) / 0.1);
+    --shadow-float: 0 20px 40px -10px hsl(var(--brand-orange) / 0.2);
+    
+    /* Design System Tokens */
+    --background: var(--brand-white);
+    --foreground: var(--brand-blue);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: var(--brand-white);
+    --card-foreground: var(--brand-blue);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: var(--brand-white);
+    --popover-foreground: var(--brand-blue);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--brand-orange);
+    --primary-foreground: var(--brand-white);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--brand-light-gray);
+    --secondary-foreground: var(--brand-blue);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--brand-light-gray);
+    --muted-foreground: 209 8% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--brand-orange);
+    --accent-foreground: var(--brand-white);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--brand-white);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--brand-light-gray);
+    --input: var(--brand-light-gray);
+    --ring: var(--brand-orange);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +119,102 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* Tipografia Bethany Elingston (principal) - será adicionada via CSS personalizado quando disponível */
+  .font-heading {
+    font-family: 'Bethany Elingston', 'Instrument Sans', serif;
+    font-weight: 400;
+  }
+  
+  .font-heading-italic {
+    font-family: 'Bethany Elingston', 'Instrument Sans', serif;
+    font-style: italic;
+  }
+  
+  /* Tipografia Instrument Sans (apoio) */
+  .font-body {
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  /* Gradientes Brand */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-section {
+    background: var(--gradient-section);
+  }
+  
+  .bg-gradient-cta {
+    background: var(--gradient-cta);
+  }
+  
+  /* Sombras Brand */
+  .shadow-brand {
+    box-shadow: var(--shadow-brand);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-float {
+    box-shadow: var(--shadow-float);
+  }
+  
+  /* Marcadores coloridos para design moderno */
+  .color-marker {
+    position: relative;
+  }
+  
+  .color-marker::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-hero);
+    border-radius: 2px;
+  }
+  
+  .color-marker-orange::before {
+    background: hsl(var(--brand-orange));
+  }
+  
+  .color-marker-blue::before {
+    background: hsl(var(--brand-blue));
+  }
+  
+  /* Elementos visuais modernos */
+  .modern-accent {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .modern-accent::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, hsl(var(--brand-orange) / 0.1), transparent);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+  }
+  
+  /* Animações suaves */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-float);
   }
 }
