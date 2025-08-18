@@ -20,8 +20,20 @@ const QuemEuSou = () => (
             <li><span className="font-semibold text-brand-blue">Especialista em atendimento humanizado</span> e em transformar vidas através do direito.</li>
             <li><span className="font-semibold text-brand-blue">Família e propósito</span>: Casada, mãe de três filhos e apaixonada por ajudar pessoas a destravarem suas carreiras.</li>
           </ul>
-          <div className="text-brand-blue/90 text-base sm:text-lg md:text-left text-center">
+          <div className="text-brand-blue/90 text-base sm:text-lg md:text-left text-center mb-6">
             Acredito que juntos podemos ir mais longe!
+          </div>
+          <div className="flex md:justify-start justify-center">
+            <button
+              type="button"
+              className="inline-block bg-brand-orange hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-200 text-base sm:text-lg"
+              onClick={() => {
+                const el = document.getElementById('cta');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Garantir meu script agora
+            </button>
           </div>
         </div>
       </div>
@@ -44,7 +56,16 @@ const Header = () => (
           className="h-8 sm:h-12 w-auto max-h-8 sm:max-h-12 object-contain shadow-card"
         />
       </div>
-      <a href="#cta" className="bg-brand-orange text-white px-6 py-2 rounded-lg font-body font-semibold shadow-float hover:scale-105 transition-smooth">Quero o Script</a>
+      <button
+        type="button"
+        className="bg-brand-orange text-white px-6 py-2 rounded-lg font-body font-semibold shadow-float hover:scale-105 transition-smooth"
+        onClick={() => {
+          const el = document.getElementById('cta');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        Quero o Script
+      </button>
     </div>
   </header>
 );
@@ -73,16 +94,19 @@ const Hero = () => (
               Passo a passo testado por quem vive disso.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-white text-brand-orange hover:bg-white/90 font-body font-semibold text-lg px-8 py-4 shadow-float transition-smooth">
-              Quero o Script Agora
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-brand-orange font-body font-medium">
-              <Play className="mr-2 h-5 w-5" />
-              Ver Demonstração
-            </Button>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="bg-white text-brand-orange hover:bg-white/90 font-body font-semibold text-lg px-8 py-4 shadow-float transition-smooth"
+                onClick={() => {
+                  const el = document.getElementById('cta');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Quero o Script Agora
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
           <div className="flex items-center gap-6 text-sm text-white/80">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4" />
@@ -390,8 +414,7 @@ const Footer = () => (
   <footer className="bg-gradient-hero text-white py-10 mt-20">
     <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="flex items-center gap-3">
-        <img src="/lovable-uploads/e94de634-6660-4b77-86cb-27d94fec7252.png" alt="Juliana Furquim" className="h-8 w-8 rounded-full" />
-        <span className="font-heading text-lg font-bold">Juliana Furquim</span>
+  <img src="/lovable-uploads/1.png" alt="Logo" className="h-8" style={{width: 'auto'}} />
       </div>
       <div className="text-sm font-body text-white/80">© {new Date().getFullYear()} Todos os direitos reservados.</div>
       <div className="flex gap-4">
