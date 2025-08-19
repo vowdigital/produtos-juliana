@@ -386,7 +386,7 @@ const Sobre = () => (
                 <div className="text-sm font-body text-muted-foreground">Clientes atendidos</div>
               </div>
               <div className="color-marker color-marker-orange">
-                <div className="text-2xl font-bold text-primary">500+</div>
+                <div className="text-2xl font-bold text-primary">200+</div>
                 <div className="text-sm font-body text-muted-foreground">Avaliações 5★</div>
               </div>
             </div>
