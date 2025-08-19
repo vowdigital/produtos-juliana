@@ -77,7 +77,7 @@ const Hero = () => (
     <div className="relative container mx-auto px-4 py-20 lg:py-32">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-4 ml-20">
             <Badge className="bg-white/20 text-white border-white/30 font-body font-medium">
               Do caos ao modelo de negócio
             </Badge>
@@ -94,7 +94,7 @@ const Hero = () => (
               Passo a passo testado por quem vive disso.
             </p>
           </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 ml-20">
               <Button
                 size="lg"
                 className="bg-white text-brand-orange hover:bg-white/90 font-body font-semibold text-lg px-8 py-4 shadow-float transition-smooth"
@@ -108,7 +108,7 @@ const Hero = () => (
               </Button>
             </div>
           <div className="flex items-center gap-6 text-sm text-white/80">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 ml-20">
               <CheckCircle className="h-4 w-4" />
               <span>Entrega IMEDIATA</span>
             </div>
@@ -118,13 +118,14 @@ const Hero = () => (
             </div>
           </div>
         </div>
-        <div className="relative">
-          <img 
-            src="/lovable-uploads/1 (1).png" 
-            alt="Desbloqueie a Conversão Previdenciária"
-            className="max-w-[180px] w-full h-auto rounded-2xl shadow-float mx-auto"
-          />
-        </div>
+       <div className="relative">
+  <img 
+    src="/lovable-uploads/jl.JPG" 
+    alt="Desbloqueie a Conversão Previdenciária"
+    className="w-[500px] h-[450px] object-cover rounded-3xl shadow-float "
+  />
+</div>
+
       </div>
     </div>
   </section>
