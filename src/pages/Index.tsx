@@ -326,10 +326,14 @@ const CTA = () => (
           alt="Logo" 
           className="mx-auto mb-3 h-8 sm:h-10 w-auto object-contain"
         />
-        <Button size="lg" className="bg-gradient-cta text-white hover:scale-105 font-body font-bold text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 shadow-float transition-smooth w-full max-w-full">
-          GARANTIR MEU SCRIPT AGORA
-          <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
-        </Button>
+       <Button
+  size="lg"
+  className="bg-gradient-cta text-white hover:scale-105 font-body font-bold text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 shadow-float transition-smooth w-full max-w-full"
+  onClick={() => window.open("https://go.hotmart.com/I101206209S", "_blank")}
+>
+  GARANTIR MEU SCRIPT AGORA
+  <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
+</Button>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 text-xs sm:text-sm text-white/70 mt-4 w-full">
           <div className="flex items-center gap-2">
             <CheckCircle className="h-4 w-4" />
@@ -419,8 +423,8 @@ const Footer = () => (
       </div>
       <div className="text-sm font-body text-white/80">© {new Date().getFullYear()} Todos os direitos reservados.</div>
       <div className="flex gap-4">
-        <a href="https://instagram.com/julianafurquimadv" target="_blank" rel="noopener" className="hover:text-brand-orange transition-smooth">Instagram</a>
-        <a href="mailto:contato@julianafurquim.com.br" className="hover:text-brand-orange transition-smooth">Contato</a>
+        <a href="https://www.instagram.com/juliana__furquim/" target="_blank" rel="noopener" className="hover:text-brand-orange transition-smooth">Instagram</a>
+        <a href="https://www.instagram.com/julianafurquimmentoria/" className="hover:text-brand-orange transition-smooth">Contato</a>
       </div>
     </div>
   </footer>
